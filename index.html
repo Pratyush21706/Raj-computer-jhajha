@@ -27,14 +27,14 @@
 			</center>
 			<br>
 			<p>Registerd Mobile no.</p>
-			<input type="text" id="number" class="text" placeholder="+91...">
+			<input type="number" id="number" class="text" placeholder="+91...">
 			<br><br>
 			<div id="recaptcha-container"></div>
 			<br>
 			<input type="button" class="btn" id="send" value="Send" onClick="phoneAuth()">
 		</div>
 		<div id="verifier" style="display: none">
-			<input type="text"class="text" id="verificationcode" placeholder="OTP Code">
+			<input type="number"class="text" id="verificationcode" placeholder="OTP Code">
 			<input type="button" class="btn" id="verify" value="Verify" onClick="codeverify()">
 			<div class="n-conf">OTP ERROR</div>
 			<div class="p-conf">succesds</div>
