@@ -27,7 +27,7 @@
 			</center>
 			<br>
 			<p>Registerd Mobile no.</p>
-			<input type="tel" id="number" class="text" placeholder="+91..." value="+91">
+			<input type="number" id="number" class="text" placeholder="+91...">
 			<br><br>
 			<div id="recaptcha-container"></div>
 			<br>
@@ -43,11 +43,14 @@
 
 	<section class="output" style="display:none">
 		<center><div class="image"><img src="https://i.pinimg.com/736x/9c/cc/d4/9cccd458f4e22bf0f35236c9ad6aa4eb--monsters-university-disney-characters.jpg"></div>
-			<h2>John doe</h2>
+			<h2>Sashikant kumar</h2>
 			<div class="content">
 				<p>Course : DCA</p>
 				<p>Enrolled on : 26/01/1998</p>
 				<p>Fees paid till : 26/02/1998</p>
+				<p>Fees paid amt : $500</p>
+				<p>Fees due : $4500</p>
+
 	
 			</div></center>
 	</section>
@@ -81,7 +84,10 @@
 	 // function for send message
  function phoneAuth(){
 	 var number = document.getElementById('number').value;
-	 firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function(confirmationResult){
+	 var new1 = "+91"+number
+	 var noo =parseInt(new1) 
+	 console.log(noo)
+	 firebase.auth().signInWithPhoneNumber(noo, window.recaptchaVerifier).then(function(confirmationResult){
 		 window.confirmationResult = confirmationResult;
 		 coderesult = confirmationResult;
 		 document.getElementById('sender').style.display = 'none';
